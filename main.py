@@ -153,6 +153,7 @@ print('The shape of y_val_high is: ', y_val_high.shape)
 
 # Apply the same steps to the larger dataset
 
+
 # Estimate the Gaussian parameters
 mu_high, var_high = estimate_gaussian(X_train_high)
 
@@ -164,6 +165,7 @@ p_val_high = multivariate_gaussian(X_val_high, mu_high, var_high)
 
 # Find the best threshold
 epsilon_high, F1_high = select_threshold(y_val_high, p_val_high)
+
 
 print('Best epsilon found using cross-validation: %e' % epsilon_high)
 print('Best F1 on Cross Validation Set:  %f' % F1_high)
